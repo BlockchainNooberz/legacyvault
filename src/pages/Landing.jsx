@@ -5,15 +5,17 @@ import { Button } from '@/components/ui/button';
 const tiers = [
   {
     name: 'Obsidian',
-    price: '250 XRP',
+    price: '$250',
+    unit: 'USDC',
     period: '/month',
     color: 'from-slate-700 to-slate-900',
     border: 'border-slate-600',
-    features: ['Family dashboard', 'Up to 3 beneficiaries', 'Smart contract library access', 'Basic stipulation builder', 'XRP payment tracking'],
+    features: ['Family dashboard', 'Up to 3 beneficiaries', 'Smart contract library access', 'Basic stipulation builder', 'Multi-chain payment tracking'],
   },
   {
     name: 'Sovereign',
-    price: '900 XRP',
+    price: '$900',
+    unit: 'USDC',
     period: '/month',
     color: 'from-amber-700 to-yellow-900',
     border: 'border-amber-500',
@@ -22,7 +24,8 @@ const tiers = [
   },
   {
     name: 'Dynasty',
-    price: '2,500 XRP',
+    price: '$2,500',
+    unit: 'USDC',
     period: '/month',
     color: 'from-violet-800 to-purple-950',
     border: 'border-violet-500',
@@ -35,7 +38,7 @@ const pillars = [
   { icon: Layers, title: 'Smart Contract Library', desc: 'Vetted inheritance, vesting, escrow, and multi-sig contracts. Every protocol chosen for 20+ year viability.' },
   { icon: TrendingUp, title: 'Ondo Finance RWAs', desc: 'Tokenized US Treasuries, money market funds, and institutional-grade bonds. Yield that preserves purchasing power.' },
   { icon: Lock, title: 'Stipulation Engine', desc: 'Encode parental intent on-chain. Age locks, education milestones, sobriety clauses — automated and tamper-proof.' },
-  { icon: Zap, title: 'XRP Settlement', desc: 'Sub-second, nearly feeless cross-border payments. Move generational wealth anywhere, instantly.' },
+  { icon: Zap, title: 'Multi-Chain Settlement', desc: 'Pay in USDC, ETH, SOL, XRP, HBAR, RLUSD, Ondo RWAs, and 15+ more tokens. Any chain, any stablecoin, instant settlement.' },
   { icon: Globe, title: 'Multi-Jurisdiction', desc: 'Support for trusts across US, Cayman, Singapore, UAE, Switzerland and beyond.' },
 ];
 
@@ -104,7 +107,7 @@ export default function Landing() {
         <div className="max-w-4xl mx-auto mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden">
           {[
             { value: '$4.2T+', label: 'Generational Wealth Addressed' },
-            { value: 'XRPL', label: 'Primary Settlement Layer' },
+            { value: '21+', label: 'Accepted Payment Tokens' },
             { value: '20yr+', label: 'Protocol Viability Standard' },
             { value: 'Ondo', label: 'RWA Partner' },
           ].map((s, i) => (
@@ -142,7 +145,7 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Membership Tiers</h2>
-            <p className="text-white/40 max-w-xl mx-auto">Denominated in XRP. Settled in seconds. Recognized worldwide.</p>
+            <p className="text-white/40 max-w-xl mx-auto">Denominated in USD · pay in USDC, ETH, SOL, XRP, stablecoins, RWAs, and 15+ more tokens.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {tiers.map((tier, i) => (
@@ -155,8 +158,9 @@ export default function Landing() {
                     <div className="text-xs font-semibold text-amber-300 uppercase tracking-wider mb-2">Most Popular</div>
                   )}
                   <h3 className="text-2xl font-bold mb-1">{tier.name}</h3>
-                  <div className="flex items-baseline gap-1">
+                  <div className="flex items-baseline gap-1.5 flex-wrap">
                     <span className="text-3xl font-bold text-amber-300">{tier.price}</span>
+                    <span className="text-blue-400 text-sm font-semibold">{tier.unit}</span>
                     <span className="text-white/50 text-sm">{tier.period}</span>
                   </div>
                 </div>

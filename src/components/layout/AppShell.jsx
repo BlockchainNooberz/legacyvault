@@ -1,7 +1,7 @@
 import { Link, useLocation, Outlet } from 'react-router-dom';
 import {
   LayoutDashboard, Vault, FileCode2, TrendingUp, Users, CreditCard,
-  Settings, Shield, ChevronRight, LogOut, Bell
+  Settings, Shield, ChevronRight, LogOut, Bell, GitBranch
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { base44 } from '@/api/base44Client';
@@ -15,6 +15,7 @@ const nav = [
   { icon: Shield, label: 'Stipulations', path: '/stipulations' },
   { icon: Users, label: 'Family', path: '/family' },
   { icon: CreditCard, label: 'Payments', path: '/payments' },
+  { icon: GitBranch, label: 'Ancestry Engine', path: '/ancestry', badge: 'Soon' },
 ];
 
 export default function AppShell() {
@@ -58,6 +59,11 @@ export default function AppShell() {
                 <Icon className="w-4 h-4 flex-shrink-0" />
                 {label}
                 {active && <ChevronRight className="w-3 h-3 ml-auto" />}
+                {!active && nav.find(n => n.path === path)?.badge && (
+                  <span className="ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-violet-500/20 text-violet-400 uppercase tracking-wider">
+                    {nav.find(n => n.path === path)?.badge}
+                  </span>
+                )}
               </Link>
             );
           })}

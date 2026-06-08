@@ -16,6 +16,7 @@ import Stipulations from '@/pages/Stipulations';
 import Family from '@/pages/Family';
 import Payments from '@/pages/Payments';
 import AppShell from '@/components/layout/AppShell';
+import AncestrySimulator from '@/pages/AncestrySimulator';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -48,6 +49,7 @@ const AuthenticatedApp = () => {
         <Route path="/stipulations" element={<Stipulations />} />
         <Route path="/family" element={<Family />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="/ancestry" element={<AncestrySimulator />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

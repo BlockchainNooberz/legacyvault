@@ -1,0 +1,63 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "family_id": {
+      "type": "string"
+    },
+    "member_id": {
+      "type": "string"
+    },
+    "payment_type": {
+      "type": "string",
+      "enum": [
+        "monthly_membership",
+        "per_transaction",
+        "vault_setup",
+        "contract_deployment",
+        "advisory"
+      ],
+      "default": "monthly_membership"
+    },
+    "amount_xrp": {
+      "type": "number"
+    },
+    "amount_usd_equiv": {
+      "type": "number"
+    },
+    "xrp_tx_hash": {
+      "type": "string"
+    },
+    "from_wallet": {
+      "type": "string"
+    },
+    "to_wallet": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "failed",
+        "refunded"
+      ],
+      "default": "pending"
+    },
+    "description": {
+      "type": "string"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "membership_period": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_id",
+    "amount_xrp",
+    "payment_type"
+  ]
+}

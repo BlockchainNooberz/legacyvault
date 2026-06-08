@@ -1,0 +1,58 @@
+{
+  "name": "Family",
+  "type": "object",
+  "properties": {
+    "family_name": {
+      "type": "string"
+    },
+    "crest_url": {
+      "type": "string"
+    },
+    "founding_year": {
+      "type": "number"
+    },
+    "primary_jurisdiction": {
+      "type": "string"
+    },
+    "total_assets_usd": {
+      "type": "number"
+    },
+    "membership_tier": {
+      "type": "string",
+      "enum": [
+        "obsidian",
+        "sovereign",
+        "dynasty"
+      ],
+      "default": "obsidian"
+    },
+    "membership_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "pending",
+        "suspended"
+      ],
+      "default": "pending"
+    },
+    "xrp_wallet_address": {
+      "type": "string"
+    },
+    "monthly_fee_xrp": {
+      "type": "number"
+    },
+    "next_billing_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "advisor_id": {
+      "type": "string"
+    },
+    "governance_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_name"
+  ]
+}

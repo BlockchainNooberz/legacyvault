@@ -1,0 +1,81 @@
+{
+  "name": "AssetHolding",
+  "type": "object",
+  "properties": {
+    "family_id": {
+      "type": "string"
+    },
+    "vault_id": {
+      "type": "string"
+    },
+    "asset_name": {
+      "type": "string"
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "tokenized_treasury",
+        "tokenized_equity",
+        "real_estate",
+        "private_equity",
+        "xrp",
+        "stablecoin",
+        "insurance_policy",
+        "art",
+        "commodities",
+        "other"
+      ],
+      "default": "tokenized_treasury"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "unit_price_usd": {
+      "type": "number"
+    },
+    "total_value_usd": {
+      "type": "number"
+    },
+    "yield_apy": {
+      "type": "number"
+    },
+    "chain": {
+      "type": "string"
+    },
+    "contract_address": {
+      "type": "string"
+    },
+    "token_symbol": {
+      "type": "string"
+    },
+    "purchase_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "maturity_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "locked",
+        "matured",
+        "liquidating"
+      ],
+      "default": "active"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_id",
+    "asset_name",
+    "asset_type"
+  ]
+}

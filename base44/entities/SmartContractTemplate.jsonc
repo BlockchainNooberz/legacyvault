@@ -1,0 +1,103 @@
+{
+  "name": "SmartContractTemplate",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "inheritance",
+        "vesting",
+        "escrow",
+        "multi_sig",
+        "rwa_tokenization",
+        "insurance",
+        "charitable",
+        "governance"
+      ],
+      "default": "inheritance"
+    },
+    "protocol": {
+      "type": "string",
+      "enum": [
+        "xrpl",
+        "ethereum",
+        "polygon",
+        "stellar",
+        "algorand"
+      ],
+      "default": "xrpl"
+    },
+    "description": {
+      "type": "string"
+    },
+    "use_case": {
+      "type": "string"
+    },
+    "risk_rating": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "elevated"
+      ],
+      "default": "low"
+    },
+    "audit_status": {
+      "type": "string",
+      "enum": [
+        "vetted",
+        "pending_audit",
+        "community_reviewed"
+      ],
+      "default": "vetted"
+    },
+    "auditor": {
+      "type": "string"
+    },
+    "protocol_age_years": {
+      "type": "number"
+    },
+    "tvl_usd": {
+      "type": "number"
+    },
+    "template_code_url": {
+      "type": "string"
+    },
+    "documentation_url": {
+      "type": "string"
+    },
+    "partners": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "access_tier": {
+      "type": "string",
+      "enum": [
+        "obsidian",
+        "sovereign",
+        "dynasty"
+      ],
+      "default": "obsidian"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "protocol"
+  ]
+}

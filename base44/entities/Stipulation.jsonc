@@ -1,0 +1,84 @@
+{
+  "name": "Stipulation",
+  "type": "object",
+  "properties": {
+    "vault_id": {
+      "type": "string"
+    },
+    "family_id": {
+      "type": "string"
+    },
+    "beneficiary_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "condition_type": {
+      "type": "string",
+      "enum": [
+        "age_milestone",
+        "education",
+        "marriage",
+        "employment",
+        "sobriety",
+        "time_lock",
+        "performance",
+        "custom"
+      ],
+      "default": "age_milestone"
+    },
+    "condition_description": {
+      "type": "string"
+    },
+    "trigger_value": {
+      "type": "string"
+    },
+    "release_amount_usd": {
+      "type": "number"
+    },
+    "release_percentage": {
+      "type": "number"
+    },
+    "release_schedule": {
+      "type": "string",
+      "enum": [
+        "lump_sum",
+        "monthly",
+        "quarterly",
+        "annually"
+      ],
+      "default": "lump_sum"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "monitoring",
+        "triggered",
+        "fulfilled",
+        "voided"
+      ],
+      "default": "pending"
+    },
+    "smart_contract_encoded": {
+      "type": "boolean",
+      "default": false
+    },
+    "verified_by": {
+      "type": "string"
+    },
+    "verification_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "vault_id",
+    "title",
+    "condition_type"
+  ]
+}

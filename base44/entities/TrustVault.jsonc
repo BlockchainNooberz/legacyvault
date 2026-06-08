@@ -1,0 +1,112 @@
+{
+  "name": "TrustVault",
+  "type": "object",
+  "properties": {
+    "vault_name": {
+      "type": "string"
+    },
+    "family_id": {
+      "type": "string"
+    },
+    "grantor_id": {
+      "type": "string"
+    },
+    "beneficiary_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trust_type": {
+      "type": "string",
+      "enum": [
+        "revocable",
+        "irrevocable",
+        "dynasty",
+        "charitable",
+        "spendthrift",
+        "blind"
+      ],
+      "default": "irrevocable"
+    },
+    "total_value_usd": {
+      "type": "number"
+    },
+    "tokenized": {
+      "type": "boolean",
+      "default": false
+    },
+    "blockchain_protocol": {
+      "type": "string",
+      "enum": [
+        "xrpl",
+        "ethereum",
+        "polygon",
+        "stellar"
+      ],
+      "default": "xrpl"
+    },
+    "smart_contract_address": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "locked",
+        "distributing",
+        "closed"
+      ],
+      "default": "draft"
+    },
+    "stipulations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "condition": {
+            "type": "string"
+          },
+          "trigger": {
+            "type": "string"
+          },
+          "amount_usd": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "distribution_schedule": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "annually",
+        "milestone",
+        "on_demand"
+      ],
+      "default": "quarterly"
+    },
+    "maturity_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "legal_jurisdiction": {
+      "type": "string"
+    },
+    "asset_classes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "vault_name",
+    "family_id"
+  ]
+}

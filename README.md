@@ -1,39 +1,38 @@
-**Welcome to your Base44 project** 
+# LegacyVault 🏛️🔐
 
-**About**
+> Secure digital estate planning, wealth transfer, and legacy management platform
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+LegacyVault helps high-net-worth individuals, families, and estate attorneys manage the digital and financial dimensions of legacy planning. It provides a secure vault for critical documents, an AI-assisted estate planning workflow, and tools for coordinating wealth transfer across generations.
 
-This project contains everything you need to run your app locally.
+## Features
+- 🗄️ **Secure Document Vault** — encrypted storage for wills, trusts, deeds, account credentials, and legal documents
+- 📋 **Estate Planning Workflow** — step-by-step guided process for comprehensive estate preparation
+- 👨‍👩‍👧 **Beneficiary Management** — manage heirs, assign assets, and set conditional distribution rules
+- 🤖 **AI Estate Assistant** — answer questions, flag gaps in planning, and generate summaries for attorneys
+- 🔔 **Life Event Triggers** — automated alerts and document updates tied to key life milestones
+- 🔗 **Attorney & Advisor Portal** — secure sharing with legal and financial professionals
 
-**Edit the code in your local development environment**
+## Tech Stack
+- **Frontend:** React / Base44 UI
+- **Backend:** Base44 entity system with row-level security
+- **Security:** End-to-end encrypted document storage
+- **AI:** Document analysis, estate gap detection, and plain-language summaries
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## Use Cases
+- High-net-worth family estate planning
+- Law firm client management portals
+- Trust company administration tools
+- Digital asset inheritance management (crypto, NFTs)
 
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
+## Getting Started
+```bash
+git clone https://github.com/BlockchainNooberz/legacyvault
+cd legacyvault
+npm install
+npm run dev
 ```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
-```
-
-Run the app: `npm run dev`
-
-**Publish your changes**
-
-Open [Base44.com](http://Base44.com) and click on Publish.
-
-**Docs & Support**
-
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
-
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+## About
+Built by **Andrew Elston** — fintech developer specializing in wealth management and estate technology.
+- GitHub: [BlockchainNooberz](https://github.com/BlockchainNooberz)
+- Contact: andrewelston177@gmail.com
